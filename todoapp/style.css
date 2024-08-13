@@ -16,14 +16,26 @@
   --Active-filter: hsl(234, 11%, 52%);
   --Inactive-filter: hsl(233, 14%, 35%);
   --Underline: hsl(237, 14%, 26%);
+  --bg-img: url(./images/bg-desktop-dark.jpg);
 }
+.light-theme {
+  --Main-BG: hsl(0, 0%, 98%);
+  --Body-BG: hsl(233, 11%, 84%);
+  --Inactive-filter: hsl(236, 9%, 61%);
+  --Text: hsl(235, 19%, 35%);
+  --bg-img: url(./images/bg-desktop-light.jpg);
 
+  /*./images/bg-desktop-light.jpg*/
+}
 body {
-  background-image: url(./images/bg-desktop-dark.jpg);
+  background-image: var(--bg-img);
   background-repeat: no-repeat;
   background-color: var(--Body-BG);
   color: var(--Text);
   font-size: 12px;
+}
+h1 {
+  color: white;
 }
 button:hover {
   cursor: pointer;
@@ -83,4 +95,28 @@ footer {
 .between {
   justify-content: space-between;
   align-items: center;
+}
+.state {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  vertical-align: middle;
+  border: 2px solid #ddd;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+.state:checked {
+  background-image: url(./images/icon-check.svg),
+    linear-gradient(
+      45deg,
+      var(--linear-gradient-start) 0%,
+      var(--linear-gradient-end) 100%
+    );
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.lined {
+  text-decoration: line-through;
 }
