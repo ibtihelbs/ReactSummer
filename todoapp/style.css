@@ -120,3 +120,6 @@ footer {
 .lined {
   text-decoration: line-through;
 }
+.items-left::after {
+  content: " items left";
+}
