@@ -25,9 +25,6 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
 }
 
 h1 {
@@ -53,16 +50,31 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+#menu {
+  display: none;
+}
+@media (max-width: 500px) {
+  nav {
+    position: relative;
   }
-  a:hover {
-    color: #747bff;
+  ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #242424;
+    width: 200px;
   }
-  button {
-    background-color: #f9f9f9;
+  .open {
+    display: flex;
+  }
+  #menu {
+    display: flex;
   }
 }
