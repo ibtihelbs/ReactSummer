@@ -5,7 +5,11 @@ const SingleTask = ({ value, setTasks, Tasks, index }) => {
         <form className="checked">
           <input
             type="checkbox"
-            onChange={(e) => {}}
+            onChange={(e) => {
+              const updated = [...Tasks];
+              updated[index].done = !Tasks[index].done;
+              setTasks(updated);
+            }}
             checked={value.done}
             className="state"
           />
