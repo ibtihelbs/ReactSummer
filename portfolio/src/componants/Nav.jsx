@@ -1,6 +1,6 @@
 import reactlogo from "../assets/react.svg";
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navLinks = [
@@ -28,17 +28,7 @@ const Nav = () => {
       <ul className={`nav ${isOpen == true ? "open" : ""}`}>
         {navLinks.map((v, i) => (
           <li key={i}>
-            <NavLink
-              style={({ isActive }) => {
-                return {
-                  color: isActive ? "red" : "white",
-                };
-              }}
-              href={v.link}
-            >
-              {" "}
-              {v.name}{" "}
-            </NavLink>
+            <Link href={v.link}> {v.name} </Link>
           </li>
         ))}
       </ul>
