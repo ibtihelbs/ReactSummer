@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ setIsOpen, isOpen }) => {
   const links = [
     { name: "Home", link: "/" },
     { name: "Shop", link: "/Shop" },
@@ -10,7 +10,7 @@ const Navbar = () => {
     <nav className="flex justify-between items-center px-9 py-5">
       <Link to={"/"}>
         {" "}
-        <h2>Sweet Dreams</h2>{" "}
+        <h2 className="text-2xl">Sweet Dreams</h2>{" "}
       </Link>
       <ul className="flex gap-3 justify-center">
         {links.map((v, i) => (
@@ -19,7 +19,9 @@ const Navbar = () => {
           </li>
         ))}
       </ul>
-      <img src="./add-to-cart.png" alt="cart" className="h-8" />
+      <button onClick={() => setIsOpen(!isOpen)}>
+        <img src="./add-to-cart.png" alt="cart" className="h-8" />
+      </button>
     </nav>
   );
 };
