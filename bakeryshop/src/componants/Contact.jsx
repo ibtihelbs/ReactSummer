@@ -27,6 +27,7 @@ const Contact = () => {
 
   return (
     <div>
+      <h1>hhh</h1>
       <h2>Contact Information</h2>
       <p><strong>Name:</strong> {bakery.name}</p>
       <p><strong>Description:</strong> {bakery.description}</p>
