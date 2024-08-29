@@ -13,7 +13,7 @@ const Products = () => {
   console.log(products);
   return (
     <div
-      className="grid grid-cols-3 px-10 
+      className="grid md:grid-cols-3 grid-cols-1 px-10 
      gap-5"
     >
       {products.map((v) => (

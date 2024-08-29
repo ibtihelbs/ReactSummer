@@ -1,8 +1,9 @@
+import H1 from "../componants/H1";
 import Products from "../componants/Products";
 const Shop = () => {
   return (
     <div>
-      <h1>shop</h1>
+      <H1 content={"Our Shop"} align={"center"} />
       <Products />
     </div>
   );

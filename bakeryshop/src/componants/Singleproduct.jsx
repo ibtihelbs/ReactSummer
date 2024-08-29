@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
-
+import AddCart from "./AddCart";
 const Singleproduct = ({ prod }) => {
   return (
-    <Link
+    <div>
+      <Link
       to={`/single/${prod.id}`}
       className="p-1 border-solid border-[1px] border-black rounded-lg"
     >
@@ -11,16 +12,16 @@ const Singleproduct = ({ prod }) => {
         alt={prod.name}
         className="w-full h-[300px] object-cover rounded-lg"
       />
+    </Link>
+
       <div className="flex justify-between p-4 ">
         <div>
           <h2>{prod.name}</h2>
           <p className="text-xl">{prod.price} </p>
         </div>
-        <button className="border-solid border-[1px] border-black px-8 rounded-full hover:bg-red-400  ">
-          add to cart
-        </button>
+        <AddCart v={prod} />
       </div>
-    </Link>
+    </div>
   );
 };
 

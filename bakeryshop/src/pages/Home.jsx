@@ -1,5 +1,12 @@
+import { useSelector } from "react-redux";
+
 const Home = () => {
-  return <div>Home</div>;
+  const cart = useSelector((state) => state);
+  console.log(cart);
+  return <div>
+    
+    
+  </div>;
 };
 
 export default Home;
